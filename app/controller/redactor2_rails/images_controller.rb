@@ -1,4 +1,5 @@
 class Redactor2Rails::ImagesController < ApplicationController
+  skip_before_action :verify_authenticity_token
   before_action :redactor2_authenticate_user!
 
   def create
